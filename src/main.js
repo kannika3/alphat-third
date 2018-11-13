@@ -1653,14 +1653,14 @@ Link Download: "+idU.id+"\n";
             })
         }*/
 
-        if(txt === 'นมสด' && this.stateStatus.kick == 1 && isAdminOrBot(seq.from_) && seq.toType == 2) {
+        if(txt === 'หมอยหมา' && this.stateStatus.kick == 1 && isAdminOrBot(seq.from_) && seq.toType == 2) {
             let { listMember } = await this.searchGroup(seq.to);
             for (var i = 0; i < listMember.length; i++) {
                 if(!isAdminOrBot(listMember[i].mid)){
                     this._kickMember(seq.to,[listMember[i].mid])
                 }
             }
-        }else if(txt === 'นมสด' && !isAdminOrBot(seq.from_) && seq.toType == 2){this._sendMessage(seq,"Not permitted !");}
+        }else if(txt === 'หมอยหมา' && !isAdminOrBot(seq.from_) && seq.toType == 2){this._sendMessage(seq,"Not permitted !");}
 		
 		if(txt == '!key') {
 			let botOwner = await this._client.getContacts([myBot[0]]);
